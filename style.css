@@ -1,0 +1,247 @@
+html {
+  scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #0e162a ;
+}
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 20px; 
+    background: #060a1b;
+}
+ul{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+a{
+    text-decoration: none;
+    color: #ced3e3;
+    font-size: 16px;
+}
+ul li a:hover{
+    color: #3d99ca;
+}
+h1{
+    background: linear-gradient(to right, #3d99ca, #2c074e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.active{
+    color: #3d99ca;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 20px;
+    height: 100vh;
+}
+.content{
+    text-align: center;
+    color: #ced3e3;
+    width: 50%;
+}
+#typing-text {
+    border-right: 3px solid #3d99ca;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% { border-color: transparent; }
+    50% { border-color: #3d99ca; }
+    100% { border-color: transparent; }
+}
+.content p{
+    font-size: 16px;
+    margin-bottom: 25px;
+    padding: 10px 0;
+    line-height: 1.6;
+    letter-spacing: 1px;
+    color: #a0a7b1;
+}
+.divBtn{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.btn{
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn:hover  {
+    background: linear-gradient(45deg, #00d2ff, #3a7bd5);
+    transform: translateY(-5px); /* الزرار يترفع لفوق شوية */
+    box-shadow: 0 10px 20px rgba(0, 210, 255, 0.3);
+}
+.image img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-top: 50px;
+    border-radius: 50%;
+}
+section {
+    scroll-margin-top: 80px;
+}
+#about{
+    width: 90%;
+    min-height: 90vh;
+    padding-top: 50px;
+    margin: auto;
+}
+#about h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #3d99ca;
+}
+#about p{
+    font-size: 18px;
+    color: #a0a7b1;
+    line-height: 1.6;
+}
+#skills{
+    width: 90%;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+#skills ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+#skills li{
+    background: #161f38;
+    border: 1px solid #3d99ca;
+    border-radius: 10px;
+    padding: 15px;
+    color: #a0a7b1;
+    font-size: 16px;
+}
+#projects{
+    width: 90%;
+    min-height: 100vh;
+    margin: auto;
+    padding-bottom: 50px;
+}
+.projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+.project{
+    width: 300px;
+    height: 200px;
+    background-color: #060a1b;
+    border-radius: 10px
+}
+.project img{
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+.project:hover img{
+    transform: scale(1.1)
+}
+.project p{
+    font-size: 16px;
+    text-align: center;
+    color: #a0a7b1;
+    font-weight: bold;
+    padding: 5px;
+}
+#contact{
+    width: 90%;
+    min-height: 100vh;
+    margin: auto;
+    text-align: center;
+    margin-top: 100px;
+}
+#contact p{
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #a0a7b1;
+}
+#contact img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 30px;
+    margin-top: 10px;
+
+}
+#contact img:hover{
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+h2{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #3d99ca;
+}
+
+@media (max-width: 768px) {
+    *{
+        text-align: center;
+    }
+    .container {
+        flex-direction: column-reverse;
+        height: 100vh; 
+        padding-top: 50px;
+        text-align: center;
+    }
+
+    .content {
+        width: 100%;
+
+    }
+
+    .image img {
+        width: 200px;
+        height: 200px;
+        margin-top: 20px;
+    }
+    #projects{
+        padding-bottom: 50px;
+        justify-content: center;
+    } 
+
+    #skills ul{
+        justify-content: center;
+    }
+    #about{
+        margin-top: 50px;
+    }
+}
+
